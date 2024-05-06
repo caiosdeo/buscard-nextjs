@@ -6,3 +6,7 @@ All calculations are made by the configuration that the user has made.
 
 It was built with Next.js 14, React, MongoDB, Tailwind.
 It uses Clerk authentication to register and manage users.
+
+## Visit
+
+Access Taking Notes [here](https://buscard-caiosdeo.vercel.app/).
