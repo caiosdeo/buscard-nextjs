@@ -20,7 +20,7 @@ const BalancePage = () => {
   const router = useRouter();
 
   const [card, setCard] = useState({
-    user: params.cardId,
+    user: params.cardId as string,
     balance: 0,
     simpleTickets: 0,
     doubleTickets: 0,
@@ -38,7 +38,9 @@ const BalancePage = () => {
     const fetchCard = async () => {
       try {
         const cardData = await getCardByUser(params.cardId as string);
-        setCard(cardData);
+        if (cardData !== undefined){
+          setCard(cardData);
+        }
       } catch (error) {
         console.error("Erro ao buscar o cartão:", error);
       }

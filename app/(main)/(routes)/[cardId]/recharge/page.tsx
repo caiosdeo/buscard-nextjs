@@ -35,7 +35,9 @@ const RechargePage = () => {
     const fetchCard = async () => {
       try {
         const cardData = await getCardByUser(params.cardId as string);
-        setCard(cardData);
+        if (cardData !== undefined){
+          setCard(cardData);
+        }
       } catch (error) {
         console.error("Erro ao buscar o cartão:", error);
       }
